@@ -1,3 +1,14 @@
+% Przedmiot: Techniki Obliczeniowe
+% Kierunek studiów: Mechatronika
+% Semestr: 2
+% Rok akademicki: 2019/2020
+% Data (dzień-miesiąc-rok): <<09-06-2020>>
+% Imię:             <<Gracjan>>
+% Nazwisko:         <<Zannier>>
+% Numer albumu ZUT: <<46775>>
+
+
+
 Oscylator nieharmoniczny
 Wstęp
 Rozpatrujemy ruch tylko wzdłuż osi x. Mamy punkt materialny o masie  na który działa siła sprężysta  oraz siła wymuszająca oraz siła tarcia , gdzie  jest położeniem (współrzędną środka masy),  prędkością,  czasem. Z definicji prędkość jest pochodą położenia po czasie, czyli wynikiem dzielenia zmiany wartości współrzędnej przez czas w jakim się ta zmiana realizuje. Formalnie przyrost czasu powinien być "nieskończenie mały". Analogicznie przyspieszenie jest pochodną prędkości po czasie, czyli ilorazem przyrostu prędkości przez czas (przyrost czasu) potrzebny do tej zmiany prędkości. Zaś z drugiej zasady dynamiki Newtona wynika że siła wypadkowa  (czyli suma siły sprężystej, zewnętrznej siły wymuszającej i siły tarcia) nadaje punktowi materialnemu przyspieszenie  (wzdłuż osi x, w innych kierunkach ruch jest z założenia niemożliwy). Możemy więc zapisać, dla małych , dwa równania:
