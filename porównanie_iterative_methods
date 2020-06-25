@@ -1,0 +1,60 @@
+format long;
+
+% patrz   Iterative Methods for Linear Systems
+
+N = 100;
+A = rand(N) + 100 * eye(N);
+b = rand(N, 1);
+
+tic
+x_div = A \ b;
+t_div = toc
+%x = inv(A) * b;
+%x = pinv(A) * b;
+
+tol = 10.^-30;
+tic
+x_pcg = pcg(A,b, tol);
+t_pcg = toc
+
+
+x_minres=minres(A,b);
+t_minres=toc
+
+x_symmlq=symmlq(A,b);
+t_symmlq=toc
+
+x_bicg=bicg(A,b);
+t_bicg=toc
+
+x_bicgstabl=bicgstabl(A,b);
+t_bicgstabl=toc
+
+x_bicgstab=bicgstab(A,b);
+t_bicgstabl=toc
+
+x_cgs=cgs(A,b);
+t_cgs=toc
+
+x_gmres=gmres(A,b);
+t_gmres=toc
+
+x_qmr=qmr(A,b);
+t_qmr=toc
+
+x_tfqmr=tfqmr(A,b);
+t_tfqmr=toc
+
+y_div = A * x_div - b;
+y_pcg = A * x_pcg - b;
+y_minres= A * x_minres -b;
+y_symmlq= A * x_symmlq -b;
+y_bicg= A * x_bicg -b;
+y_bicgstabl= A * x_bicgstabl -b;
+y_bicgstab= A * x_bicgstab -b;
+y_cgs= A * x_cgs -b;
+y_gmres=A * x_gmres -b;
+y_qmr=A * x_qmr -b;
+y_tfqmr=A * x_tfqmr -b;
+
+[std(y_div), std(y_pcg),std(y_minres),std(y_symmlq),std(y_bicg),std(y_bicgstabl),std(y_bicgstab),std(y_cgs),std(y_gmres),std(y_qmr),std(y_tfqmr)]
